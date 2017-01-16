@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>STARLINK&trade; Admin Portal | Search Result</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jqc-1.12.3/dt-1.10.12/datatables.min.css"/>
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jqc-1.12.3/dt-1.10.12/datatables.min.js"></script>
+    </head>
+    <body>
+        <header></header>
+        <nav></nav>
+        
+        <section class="content">
+            <div class="search" id="search"></div>
+            
+            <table id="table_result" class="display" width="100%"></table>
+            
+        </section>
+        
+        <footer></footer>
+        <script src="js/main.js"></script>
+        
+        <script>
+            var dataSet = [
+            [ "Karina Brodsky1", "kbro@subaru.com (active)", "2016 Outback 1234567890ABCDEFG Nickname",  "Active, True, Gen 1", "08003" ],
+            [ "Karina Brodsky2", "kbro@subaru.com (inactive)", "2016 Outback 1234567890ABCDEFG Nickname",  "Active, True, Gen 1", "08003" ],
+            [ "Karina Brodsky3", "kbro@subaru.com (active)", "2016 Outback 1234567890ABCDEFG Nickname",  "Active, True, Gen 1", "08003" ],
+            [ "Karina Brodsky4", "kbro@subaru.com (active)", "2016 Outback 1234567890ABCDEFG Nickname",  "Active, True, Gen 1", "08003" ],
+            [ "Vir Su1", "ysu@subaru.com (active)", "2016 Outback 1234567890ABCDEFG Nickname",  "Active, True, Gen 1", "08002" ],
+            [ "Vir Su2", "ysu@subaru.com (inactive)", "2016 Outback 1234567890ABCDEFG Nickname",  "Active, True, Gen 1", "08002" ],
+            [ "Vir Su3", "ysu@subaru.com (active)", "2016 Outback 1234567890ABCDEFG Nickname",  "Active, True, Gen 1", "08002" ],
+            [ "Vir Su4", "ysu@subaru.com (active)", "2016 Outback 1234567890ABCDEFG Nickname",  "Active, True, Gen 1", "08002" ]
+            ];
+
+            $(document).ready(function () {
+                $('#table_result').DataTable({
+                    data: dataSet,
+                    columns: [
+                        {title: "Name"},
+                        {title: "MySubaru Email"},
+                        {title: "Model Year, VIN, Nickname"},
+                        {title: "Vehicle Status, Telematics Enabled, Gen Type"},
+                        {title: "Zip"}
+                    ],
+                    "oLanguage": {
+                        "sSearch": "Filter "
+                    }
+                });
+                
+                $('#table_result').click(function(){
+                    window.location.href = "customer_detail.html";
+                });
+            });
+        </script>
+    </body>
+</html>

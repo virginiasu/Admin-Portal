@@ -1,0 +1,547 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 23, 2016, 11:19:39 AM
+    Author     : ysu
+*/
+
+
+/***********************************************
+  SOA -- general -- elements
+  *********************************************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2px;
+    margin: 0;
+    background: #20609f;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: #666;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+span.alert {
+    display: inline-block;
+    width :30px;
+    height: 20px;
+    background: url(../img/icon_alert.png) no-repeat center;
+    background-size: 20px;
+    vertical-align: bottom;
+}
+
+.col3 a.button.primary {
+    width: 100%;
+}
+
+p {
+    margin: 5px 0;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 200px;
+    border: none;
+    outline: none;
+}
+
+/*input checkbox*/
+.label_fix {
+    width: 150px;
+    display: inline-block;
+    text-align: right;
+    margin-right:10px;
+}
+
+.checkbox_container {
+    display: inline-block;
+    position: relative;
+    padding: 14px 5px;
+    margin-right: 10px;
+}
+
+.checkbox_container input.checkGeneral {
+    display: none;
+}
+
+.checkbox_container label.checkboxGeneral {
+    display: block;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.checkbox_container label.checkboxGeneral:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -12px;
+    border-radius: 5px;
+    border: 3px solid #20609f;
+/*    -webkit-mask-image: url("../img/icon_check.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center -2px;
+    -webkit-mask-size: 25px;*/
+}
+
+.checkbox_container .checkGeneral:checked + label:after {
+    background-image: url("../img/icon_check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
+
+
+ul {
+    margin: 5px;
+    padding-left: 20px;
+}
+
+li {
+    line-height: 20px;
+}
+
+form .label {
+    font-size: 13px;
+    color: #666;
+}
+
+table {
+    text-align: center;
+    border: 1px solid #666;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid #999;
+}
+
+/***********************************************
+  SOA -- general -- classes
+  *********************************************/
+/*float and column*/
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix:after {
+    content: " "; 
+    display: table; 
+    clear: both;
+}
+
+.col2 {
+    width: 50%;
+    position: relative;
+}
+
+.col3 {
+    width :33%;
+}
+
+.colLong {
+    width: 70%;
+}
+
+.colShort {
+    width: 28%;
+    max-width: 400px;
+}
+
+.item_topcorner {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.item_topcorner_out {
+    position: absolute;
+    top: -25px;
+    right: 0;
+}
+
+.item_bottomcorner {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/*text*/
+.strong {
+    font-weight: bold;
+}
+
+/*dark background*/
+.tag {
+    font-weight: bold;
+}
+
+/*light background*/
+.tag_light {
+    font-weight: bold;
+    color: #152b3e;
+    font-size: 1.1em;
+}
+
+.center {
+    text-align: center;
+}
+
+/*buttons*/
+.button_block {
+    text-align: center;
+}
+
+.button_block .item_link {
+    display: inline-block;
+    width: 240px;
+    margin: 5px 0;
+}
+
+.item_link.primary {
+    padding: 6px 10px;
+    background: #20609f;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.item_link.secondary {
+    padding: 6px 10px;
+    background: #90b9e2;
+    color: #000;
+    border-radius: 5px;
+}
+
+.item_link.cancel {
+    padding: 6px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.item_link.remove {
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: #fff;
+    background: #a92e1f;
+    /*background: #c31600;*/
+}
+
+.item_link.ext, .item_link.edit, .item_link.lookup {
+    padding: 6px 10px;
+    background: #20609f;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.item_link.ext:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background: url(../img/icon_ext.png) no-repeat;
+    background-size: 20px;
+    vertical-align: middle;
+}
+
+.item_link.edit:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background: url(../img/icon_pencil.png) no-repeat;
+    background-size: 20px;
+    vertical-align: middle;
+}
+
+.item_link.lookup:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background: url(../img/icon_search.png) no-repeat;
+    background-size: 20px;
+    vertical-align: middle;
+}
+
+/*boxes*/
+.shadow_container {
+    box-shadow: 0 0 5px;
+    padding: 10px;
+    position: relative;
+}
+
+/***********************************************
+  SOA -- header 
+  *********************************************/
+header {
+    padding: 5px 10px 5px 200px;;
+    background-color: #ffffff;
+    background-image: url("../img/Subaru_logo.jpg");
+    background-repeat: no-repeat;
+    background-position: 10px 5px;
+    background-size: 180px;
+}
+
+header .greeting {
+    padding: 0 10px;
+    
+    color: #666;
+    text-align: right;
+}
+
+header .extButtons {
+    padding: 20px 10px 0;
+    text-align: right;
+
+}
+
+header .extButtons .item_link {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+/***********************************************
+  SOA -- nav, subNav 
+  *********************************************/
+nav {
+    position: relative;
+}
+
+#navIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 38px;
+    height: 36px;
+    background: url("../img/icon_nav.png") no-repeat center;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.content.push #navIcon {
+    left: -38px;
+}
+
+nav ul.main {
+    margin: 2px 0 0;
+    padding: 0;
+    width: 240px;
+    
+    text-align: right;
+    list-style-type: none;
+}
+
+nav a.item_link {
+    display: inline-block;
+    padding: 5px;
+    width: 100%;
+    color: #fff;
+    border-bottom: 1px solid #a6bfd8;
+}
+
+.home nav a.item_link {
+    margin: 0;
+}
+
+nav a.item_link:hover, nav a.item_link.active {
+    color: #333;
+    background: #fff;
+}
+
+.starlink_enroll a.item_link[href="starlink_enroll.html"],
+.resource_center a.item_link[href="resource_center.html"],
+.coupon_admin a.item_link[href="coupon_admin.html"],
+.user_admin a.item_link[href="user_admin.html"] {
+    color: #333;
+    background: #fff;
+}
+
+.subNav {
+    padding: 10px 0;
+    border-bottom: 1px solid #666;
+}
+
+a.subNav_item {
+    color: #20609f;
+    cursor: pointer;
+}
+
+/***********************************************
+  SOA -- footer 
+  *********************************************/
+
+/***********************************************
+  SOA -- content 
+  *********************************************/
+section.content {
+    position: absolute;
+    left: 242px;
+    right: 2px;
+    top: 76px;
+    min-height: 90%;
+    padding: 0 10px 50px;
+
+    background: #fff;;
+}
+
+section.content.push {
+    box-shadow: -20px 20px 20px rgba(0,0,0,0.6);
+}
+
+/***********************************************
+  SOA -- search  
+  *********************************************/
+.search {
+    margin: 0 0 20px 40px;
+    /*margin: 0 10px 20px;*/
+    padding: 5px;
+    text-align: center;
+    vertical-align: top;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px;
+
+    background: #20609f;
+    background: -moz-linear-gradient(top, rgba(32, 96, 159,0.5) 0%, rgba(32, 96, 159,1) 50%, rgba(32, 96, 159,1) 51%, rgba(32, 96, 159,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(32, 96, 159,0.5) 0%,rgba(32, 96, 159,1) 50%,rgba(32, 96, 159,1) 51%,rgba(32, 96, 159,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(32, 96, 159,0.5) 0%,rgba(32, 96, 159,1) 50%,rgba(32, 96, 159,1) 51%,rgba(32, 96, 159,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.search input.item_search {
+    margin: 0 5px;
+    vertical-align: top;
+}
+
+.search .submitSearch {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    
+    background: url("../img/icon_search.png") no-repeat center;
+    background-size: 100%;
+}
+
+/***********************************************
+  SOA -- block  
+  *********************************************/
+.block {
+    margin-bottom: 20px; 
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+}
+
+.block .block_header {
+    padding: 5px 10px;
+    background: #20609f;
+    background: -moz-linear-gradient(top, rgba(32, 96, 159,0.5) 0%, rgba(32, 96, 159,1) 50%,rgba(32, 96, 159,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(32, 96, 159,0.5) 0%,rgba(32, 96, 159,1) 50%, rgba(32, 96, 159,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-linear-gradient(top, #666 0%, #333 50%, #333 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(32, 96, 159,0.5) 0%,rgba(32, 96, 159,1) 50%, rgba(32, 96, 159,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    color: #fff;
+    border-radius: 5px;
+}
+
+.block .block_content {
+    display: none; 
+    position: relative;
+    padding: 10px 10px 50px;
+}
+
+.block.block_expanded .block_content {
+    display: block;
+}
+
+.block.block_expanded span.minimize{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    
+    background: url("../img/icon_minimize.png");
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.block span.minimize {
+    display: none;
+}
+
+.block span.expand {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    
+    background: url("../img/icon_maximize.png");
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.block.block_expanded span.expand {
+    display: none;
+}
+
+/***********************************************
+  SOA -- group  
+  *********************************************/
+.group_container {
+    display: none;
+    padding: 0 20px;
+}
+
+.group_item {
+/*    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 8px;*/
+}
+
+.group_item .col2.shadow_container {
+    width: 48%;
+    margin: 1%;
+}
+
+.group_close_trigger {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("../img/icon_hide.jpg") no-repeat center;
+    background-size: 100%;
+}
+
+.group_bar {
+    background: -moz-linear-gradient(top, rgba(32, 96, 159,0.5) 0%, rgba(32, 96, 159,1) 50%, rgba(32, 96, 159,1) 51%, rgba(32, 96, 159,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(32, 96, 159,0.5) 0%,rgba(32, 96, 159,1) 50%,rgba(32, 96, 159,1) 51%,rgba(32, 96, 159,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(32, 96, 159,0.5) 0%,rgba(32, 96, 159,1) 50%,rgba(32, 96, 159,1) 51%,rgba(32, 96, 159,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.group_trigger {
+    color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.group_trigger.active {
+    background: #20609f;
+}

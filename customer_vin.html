@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>STARLINK&trade; Admin Portal | Customer VIN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jqc-1.12.3/dt-1.10.12/datatables.min.css"/>
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jqc-1.12.3/dt-1.10.12/datatables.min.js"></script>
+    </head>
+    <body>
+        <header></header>
+        <nav></nav>
+        
+        <section class="content">
+            <div class="search" id="search"></div>
+            <div class="subNav"><a class="subNav_item" href="customer_detail.html">Karina Brodsky</a>&nbsp;>>&nbsp;<a class="subNav_item">Vehicle Nickname</a></div>
+            
+            
+            <!--profile-->
+<!--            <div class="clearfix">
+                <div class="left colLong">
+                    <div>MySubaru Email/Username/Login ID: <span class="tag_light">kbbro2subaru.com</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="item_link edit">Update</a></div>
+                    <div class="" style="margin: 20px 0;">Password Failed Attempts: <span class="tag">0</span></div>
+                    
+                    <div class="shadow_container">
+                        <p class="tag_light">MySubaru Address</p>
+                        <div>
+                            <p>Subaru Plaza P.O. Box 6000</p>
+                            <p>Cherry Hill</p>
+                            <p>New Jersey 08034</p>
+                        </div>
+                        <div class="item_topcorner">
+                            <a class="item_link edit">Update</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right colShort">
+                    <div class="button_block">
+                        <a class='item_link primary'>Check Security Questions</a>
+                        <a class='item_link primary'>Send Reset Password Email</a>
+                        <a class='item_link primary'>Reset Password and Security Questions</a>
+                        <a class='item_link primary'>Set Password</a>
+                        <a class="item_link ext">Log in to MySubaru</a>
+                        <a class="item_link remove">De-Active MySubaru Account</a>
+                    </div>
+                </div>
+            </div>
+                
+            <br>        -->
+            
+<!--            <div class="block block_expanded">
+                <div class="block_header clearfix">
+                    <div class="left block_header_detail">Vehicle <span class="tag">1234567890VIN1334 -- </span><span class="tag">2015 Outback Blue/Grey -- </span><span class="tag">Active, Enabled -- </span><span class="tag">SUBARU STARLINK&trade; Safety and Security -- 1 Alert</span></div>
+                    <div class="right block_header_options">
+                        <span class="minimize"></span>
+                        <span class="expand"></span>
+                    </div>
+                </div>-->
+                
+                <div class="block_content clearfix" style="position: relative;">
+                    <div class="left col2">
+                        <p>VIN: <span class="tag_light">1234567890ABCDEFG</span></p>
+                        <p><span class="alert"></span>Check Engine &nbsp;&nbsp;<a class="item_link primary">Schedule Service</a></p>
+                        <p>Model Year Carline: <span class="tag_light">2016 Forester 2.5i Limited</span></p>
+                        <p>Nickname: <span class="tag_light">Forester</span></p>
+                        <p>Telematics enabled: <span class="tag_light">Yes</span></p>
+                        <p>Status: <span class="tag_light">Active</span></p>
+                        <p>Preferred Retailer: <span class="tag_light">Subaru of Cherry Hill</span></p>
+                        <p>Upcoming Appointment with <span class="tag_light">Bay Ridge Subaru</span> on <span class="tag_light">August 3, 2016</span> at <span class="tag_light">8:00 AM</span></p>
+
+                    </div>
+                    
+                    <div class="left col2">
+                        <p>Active SUBARU STARLINK&trade; Safety and Security Package</p>
+                        <p><span class="tag_light">01/01/2016 - 12/31/2016</span> </p>
+                        <p><a class="item_link primary">Upgrade Plan</a> <a class="item_link primary">View Invoice History</a> <a class="item_link cancel">Cancel Plan</a></p>
+                        <p>Provision Date: <span class="tag_light">01/01/19</span></p>
+                        <p>Services Provisioned: <span class="tag_light">SOS, ACN</span></p>
+                    </div>
+                    <a class="item_link remove">Deactivate VIN</a>
+                </div>
+
+                <div style="padding-top: 20px; position: relative; box-shadow: inset 0 3px 3px #666; margin: 30px -10px 0; padding-bottom: 10px;">
+                    <div class="item_topcorner_out group_bar">
+                        <a class="group_trigger active" data-group="vehicleInfo">View Vehicle Details</a>
+                        <a class="group_trigger" data-group="starlinkPackage">STARLINK&trade; Subscription</a>
+                        <a class="group_trigger" data-group="vehicleHealth">Vehicle Health</a>
+                        <a class="group_trigger" data-group="preferences">STARLINK&trade; Preferences</a>
+                        <a class="group_trigger" data-group="communication">User and Contacts</a>
+                    </div>
+                    <div class="group_container vehicleInfo">
+                        <div class="group_item clearfix">
+                            <div class="left col2 shadow_container">
+                                <div class="item_topcorner">
+                                    <a class="item_link edit">Update</a>
+                                </div>
+                                <p>VIN: <span class="tag_light">1234567890ABCDEFG</span></p>
+                                <p>Model Year Carline: <span class="tag_light">2016 Forester 2.5i Limited</span></p>
+                                <p>Nickname: <span class="tag_light">Forester</span></p>
+                                <p>Gen Type: <span class="tag_light">Gen 1</span></p>
+                                <p>Telematics enabled: <span class="tag_light">Yes</span></p>
+                                <p>Status: <span class="tag_light">Active</span></p>
+                                <p>IGN_OFF ODOMETER: <span class="tag_light">5000 miles</span></p>
+                                <p>OEM_Customer_ID <span class="tag_light">1-5ZF47ER</span></p>
+                                <p>ICCID: <span class="tag_light"></span></p>
+                                <p>IMEI: <span class="tag_light"></span></p>
+                                <p>COMM CHECK Status: <span class="tag_light">Success</span> Date: <span class="tag_light">01/01/19</span></p>
+                            </div>
+
+                            <div class="left col2" style="padding: 10px 20px;">
+                                Vehicle Capabilities
+                                <ul>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                    <li>Item</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group_container starlinkPackage">
+                        <div class="group_item clearfix">
+                            <h3>Active SUBARU STARLINK&trade; Safety and Security Package</h3>
+                            <div class="left col2">
+                                <span class="tag_light">01/01/2016 - 12/31/2016</span> 
+                                <p><a class="item_link primary">Upgrade Plan</a> <a class="item_link primary">View Invoice History</a> <a class="item_link cancel">Cancel Plan</a></p>
+                                <div>
+                                    <p>Package Includes:</p>
+                                    <ul>
+                                        <li>Stolen Vehicle Recovery</li>
+                                        <li>Stolen Vehicle Immobilizer</li>
+                                        <li>Vehicle Security Alarm Notifications</li>
+                                        <li>Remote Lock/Unlock</li>
+                                        <li>Remote Horn/Lights</li>
+                                        <li>Remote Vehicle Locator</li>
+                                        <li>Remote Engine Starter</li>
+                                        <li>Remote Climate Control/li&gt;
+                                        </li><li>Geo Fencing</li>
+                                        <li>Speed Alert</li>
+                                        <li>Curfew Alert</li>
+                                    </ul>
+                                    <p>Wi-Fi: <span class="tag_light">Yes</span> <a class="item_link primary">View Details </a></p>
+                                </div>
+                            </div>
+
+                            <div class="left col2 shadow_container" style="padding: 10px 20px;">
+                                <div class="item_topcorner">
+                                    <a class="item_link edit">Update</a>
+                                </div>
+                                <p>Billing Information:</p>
+                                <p>First Name: <span class="tag_light">Karina</span> Last Name: <span class="tag_light">Brodsky</span></p>
+                                <p>Email: <span class="tag_light">kbro@subaru.com</span></p>
+                                <br>
+
+                                <p>Billing Address:</p>
+                                <p><span class="tag_light">2995 Chapel Ave, Cherry Hill, NJ 08002</span></p>
+                                <br>
+
+                                <p>Home Phone: <span class="tag_light">888-888-8888</span></p>
+                                <p>Cell Phone: <span class="tag_light">777-777-7777</span></p>
+                                <p>Work Phone: <span class="tag_light">555-555-5555</span></p>
+                                <br>
+
+                                <p>Payment Method: <span class="tag_light">Credit Card</span></p>
+                                <p>Credit Card Number: <span class="tag_light">****-****-****-6666</span></p>
+                                <p><span class="tag_light">Exp: </span> 06/20</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="group_container vehicleHealth">
+                        <div class="group_item clearfix">
+                            <div class="left col2 shadow_container">
+                                <div class="item_topcorner">
+                                    <a class="item_link lookup">Find A Retailer</a>
+                                </div>
+                                <p>Preferred Retailer: <span class="tag_light">Subaru of Cherry Hill</span></p>
+                                <p>1800 Marlton Pike W</p>
+                                <p>Cherry Hill, NJ</p>
+                                <p>08002</p>
+                                <p>(856)330-1500</p>
+                            </div>
+
+                            <div class="left col2" style="padding: 10px 20px;">
+                                <p><span class="alert"></span>Check Engine</p>
+                                <a class="item_link primary">Schedule Appointment with "Bay Ridge Subaru"</a>
+                                <div>
+                                    <p>Upcoming Appointment with <span class="tag_light">Bay Ridge Subaru</span> on <span class="tag_light">August 3, 2016</span> at <span class="tag_light">8:00 AM</span></p>
+                                    <p>Advisor: <span class="tag_light">Manuel V Navas</span></p>
+                                    <p>Transportation: <span class="tag_light">Drop Off Vehicle</span></p>
+                                    <p>Service <span class="tag_light">Next Recommended Maintenance Interval</span></p>
+                                    <a class="item_link cancel">Cancel Appointment</a><a class="item_link primary">Change Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                    
+                    <div class="group_container preferences">
+                        <form class="group_item clearfix">
+                            <fieldset  class="clearfix"> 
+                                <div class="left col2">
+                                    <div> <!--form section div -->
+                                        <h4>Phone Numbers</h4>
+                                        Mobile Phone Number*: <input class="tag_light" type="text" value="777-777-7777"> Carrier* <input class="tag_light" type="text">
+                                        Home Phone Number: <input class="tag_light" type="text">
+                                        Work Phone Number: <input class="tag_light" type="text">
+                                    </div>
+                                    <div><!--form section div -->
+                                        <h4>Remote Service Notifications</h4>
+                                        <div><span class="label_fix">Lock Vehicle:</span>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationLock_email"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationLock_email" class="checkboxGeneral">Email</label>
+                                            </div>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationLock_text"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationLock_text" class="checkboxGeneral">Text</label>
+                                            </div>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationLock_call"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationLock_call" class="checkboxGeneral">Automated Call</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div><span class="label_fix">Unlock Vehicle:</span>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationUnlock_email"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationUnlock_email" class="checkboxGeneral">Email</label>
+                                            </div>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationUnlock_text"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationUnlock_text" class="checkboxGeneral">Text</label>
+                                            </div>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationUnlock_call"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationUnlock_call" class="checkboxGeneral">Automated Call</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div><span class="label_fix">Horn and Lights:</span>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationHornlights_email"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationHornlights_email" class="checkboxGeneral">Email</label>
+                                            </div>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationHornlights_text"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationHornlights_text" class="checkboxGeneral">Text</label>
+                                            </div>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationHornlights_call"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationHornlights_call" class="checkboxGeneral">Automated Call</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div><span class="label_fix">Stolen Vehicle Tracker:</span>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationStolentracker_email"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationStolentracker_email" class="checkboxGeneral">Email</label>
+                                            </div>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationStolentracker_text"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationStolentracker_text" class="checkboxGeneral">Text</label>
+                                            </div>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationStolentracker_call"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationStolentracker_call" class="checkboxGeneral">Automated Call</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div><span class="label_fix">Alarm :</span>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationAlarm_email"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationAlarm_email" class="checkboxGeneral">Email</label>
+                                            </div>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationAlarm_text"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationAlarm_text" class="checkboxGeneral">Text</label>
+                                            </div>
+                                            <div class="checkbox_container">
+                                                <input type="checkbox" id="remoteCommunicationAlarm_call"  class="checkGeneral" value="">
+                                                <label for="remoteCommunicationAlarm_call" class="checkboxGeneral">Automated Call</label>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    
+                                    <div>
+                                        Your Preferred Language* 
+                                        <select>
+                                            <option>Select</option>
+                                            <option>English</option>
+                                            <option>French</option>
+                                            <option>Japanese</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="group_container communication">
+                        <div class="group_item clearfix">
+                            <h2>Emergency Contacts:</h2>
+                            <div class="left colLong">
+                                <table>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Relationship</th>
+                                        <th>Contact Information</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Shilpa Ghanmode</td>
+                                        <td>Business Contact</td>
+                                        <td>C: 777-777-7777<br>W: 777-888-8888<br>H: 999-888-7777</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="left colShort">
+                                <div class="button_block">
+                                    <a class="item_link primary">Update</a>
+                                    <a class="item_link secondary">Add</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="group_item clearfix">
+                            <h2>Authorized Users</h2>
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>MySubaru Email Account</th>
+                                    <th>Authorized For</th>
+                                    <th>De-Authorize User</th>
+                                </tr>
+                                <tr>
+                                    <td>Shilpa Goanmaode</td>
+                                    <td>vxicssgha@subaru.com</td>
+                                    <td>ACN, SOS, Remote Services</td>
+                                    <td><a class="item_link remove">De-Authorize</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>     
+                </div>
+            <!--</div>-->
+        </section>
+        
+        <footer></footer>
+        <script src="js/main.js"></script>
+        <script src="js/profile.js"></script>
+        <script src="js/starlinkProfile.js"></script>
+    </body>
+</html>

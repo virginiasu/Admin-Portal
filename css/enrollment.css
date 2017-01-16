@@ -1,0 +1,92 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 1, 2016, 4:40:27 PM
+    Author     : ysu
+*/
+
+h3 {
+    margin: 0;
+}
+
+li {
+    line-height: 25px;
+}
+
+.couponContainer {
+    display: none;
+    background: #a6bfd8;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 1px 1px 5px;
+    margin-bottom: 10px;
+}
+
+.couponValue {
+    display: block;
+    background: #fff;
+    color: #333;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px 0;
+}
+
+.col3 .item_link.primary {
+    width: 100%;
+}
+
+span.billing_addr_check {
+    line-height: 20px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+span.billing_addr_check:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+span.billing_addr_check.checked:before {
+    background: url("../img/icon_check.svg") no-repeat center;
+    background-size: 18px;
+}
+
+.billing_addr_manual {
+    display: none;
+}
+
+/*to be removed*/
+#review {
+    display: none;
+}
+
+#review .bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: rgba(0,0,0,0.5);
+}
+
+#review .content {
+    background: url(../img/template_review.png) no-repeat center;
+    background-size: 100%;
+    width: 60%;
+    height: 900px;
+    padding: 20px;
+    z-index: 5;
+    position: fixed;
+    left: 20%;
+    top: 50%;
+    margin-top: -450px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>STARLINK&trade; Admin Portal | Coupon Admin</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jqc-1.12.3/dt-1.10.12/datatables.min.css"/>
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jqc-1.12.3/dt-1.10.12/datatables.min.js"></script>
+    </head>
+    <body class="coupon_admin">
+        <header></header>
+        <nav></nav>
+        
+        <section class="content">
+            <div class="search" id="search"></div>
+            
+            <h1>Coupons Admin</h1>
+            <p><a class="item_link primary">Create Coupons</a></p>
+            
+            <h2>List of Coupons</h2>
+            <table id="couponList">
+                
+            </table>
+        </section>
+        
+        <footer></footer>
+        <script src="js/main.js"></script>
+        
+        <script>
+            $(document).ready(function () {
+                var dataSet = [
+                    [ "Coupon 1", "SOA123456", "10% off",  "STARLINK&trade;",  "07/14/16 - 01/14/16", "Standard", "<a class='item_link primary'>Edit<a>" ],
+                    [ "Coupon 2", "SOA123556", "15% off",  "STARLINK&trade;",  "07/14/16 - 01/14/16", "Standard", "<a class='item_link primary'>Edit<a>" ],
+                    [ "Coupon 3", "SOA124656", "10% off",  "STARLINK&trade;",  "08/14/16 - 01/14/16", "Standard", "<a class='item_link primary'>Edit<a>" ],
+                    [ "Coupon 4", "SOA121456", "10% off",  "STARLINK&trade;",  "07/14/16 - 01/14/16", "Standard", "<a class='item_link primary'>Edit<a>" ],
+                    [ "Coupon 5", "SOA1238556", "20% off",  "STARLINK&trade;",  "07/14/16 - 01/14/16", "Standard", "<a class='item_link primary'>Edit<a>" ],
+                    [ "Coupon 6", "SOA189456", "10% off",  "Dealer Name",  "07/14/16 - 01/14/18", "Goodwill", "<a class='item_link primary'>Edit<a>" ],
+                    [ "Coupon 7", "SOA125656", "20% off",  "Dealer Name",  "07/14/16 - 01/14/16", "Goodwill", "<a class='item_link primary'>Edit<a>" ],
+                    [ "Coupon 8", "SOA136456", "10% off",  "Dealer Name",  "07/14/16 - 01/14/16", "Goodwill", "<a class='item_link primary'>Edit<a>" ],
+                    [ "Coupon 9", "SOA123436", "25% off",  "General",  "07/14/16 - 01/14/16", "Goodwill", "<a class='item_link primary'>Edit<a>" ],
+                    [ "Coupon 10", "SOA123428", "30% off",  "General",  "07/14/16 - 01/14/16", "Goodwill", "<a class='item_link primary'>Edit<a>" ],
+                    [ "Coupon 11", "SOA654926", "10% off",  "General",  "07/14/16 - 01/14/16", "Goodwill", "<a class='item_link primary'>Edit<a>" ],
+                    [ "Coupon 12", "SOA122056", "20% off",  "General",  "07/14/16 - 01/14/16", "Goodwill", "<a class='item_link primary'>Edit<a>" ]
+                ];
+                $('#couponList').DataTable({
+                    data: dataSet,
+                    columns: [
+                        {title: "Name"},
+                        {title: "Promo Code"},
+                        {title: "Discount"},
+                        {title: "Applicability"},
+                        {title: "Active Date(Expiring?)"},
+                        {title: "Type"},
+                        {title: "Action"}
+                    ],
+                    "oLanguage": {
+                        "sSearch": "Filter "
+                    }
+                });                
+            });
+        </script>
+        
+    </body>
+</html>

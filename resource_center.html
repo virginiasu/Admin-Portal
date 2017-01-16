@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>STARLINK&trade; Admin Portal | Resource Center</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jqc-1.12.3/dt-1.10.12/datatables.min.css"/>
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <link type="text/css" rel="stylesheet" href="css/resource.css">
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jqc-1.12.3/dt-1.10.12/datatables.min.js"></script>
+    </head>
+    <body class="resource_center">
+        <header></header>
+        <nav></nav>
+        
+        <section class="content">
+            <div class="search" id="search"></div>
+            
+            <h1>Resource Center Header</h1>
+            <p><a class="item_link primary modalTrigger" data-modal_id="createResource" data-modal_title="Create Resource">Create Resource</a></p>
+            <div data-remove="remove" style="margin-bottom: 20px;">
+
+                <p style="padding: 20px; font-weight: bold; border-bottom: 1px solid;">Contents</p>
+                <p>Lorem ipsum dolor sit amet, in clita discere sit, at qui augue antiopam, 
+                    mei postea cetero tincidunt eu. Sea commodo mediocrem tincidunt ea, vocibus graecis detracto cu qui, usu id hinc aperiri epicurei. 
+                    Vel malis corpora qualisque in, eius labores eos et. 
+                    Brute dicant scripta ad nec, in equidem consequat ullamcorper eum, no per zril saperet detraxit.</p>
+            </div>
+            
+            <div class="group_bar">
+                <a class="group_trigger active" data-group="faqs">FAQs</a>
+                <a class="group_trigger" data-group="appdownload">Mobile APP and Download Info</a>
+                <a class="group_trigger" data-group="remoteservice">Remote Service Help</a>
+                 <a class="group_trigger" data-group="announcements">Announcements</a>
+                <!--<a class="group_trigger" data-group=""></a>-->
+            </div>
+            
+            <div class="group_container announcements">
+                <table id="announcementList">
+                    <thead>
+                        <tr>
+                            <th>Announcement</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a class="item_announceTitle">Chairman's Roundtable - Only 3 Selling Days Left!</a>
+                                <p class="item_announceContent">Lorem ipsum dolor sit amet, in clita discere sit, at qui augue antiopam, mei postea cetero tincidunt eu. Sea commodo mediocrem tincidunt ea, vocibus graecis detracto cu qui, usu id hinc aperiri epicurei. Vel malis corpora qualisque in, eius labores eos et. Brute dicant scripta ad nec, in equidem consequat ullamcorper eum, no per zril saperet detraxit.</p>
+                            </td>
+                            <td>1/31/2017</td>
+                            <td>Parts/Service</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <a class="item_announceTitle">Chairman's Roundtable - Only 3 Selling Days Left!</a>
+                                <p class="item_announceContent">Lorem ipsum dolor sit amet, in clita discere sit, at qui augue antiopam, mei postea cetero tincidunt eu. Sea commodo mediocrem tincidunt ea, vocibus graecis detracto cu qui, usu id hinc aperiri epicurei. Vel malis corpora qualisque in, eius labores eos et. Brute dicant scripta ad nec, in equidem consequat ullamcorper eum, no per zril saperet detraxit.</p>
+                            </td>
+                            <td>1/31/2017</td>
+                            <td>Parts/Service</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <a class="item_announceTitle">Chairman's Roundtable - Only 3 Selling Days Left!</a>
+                                <p class="item_announceContent">Lorem ipsum dolor sit amet, in clita discere sit, at qui augue antiopam, mei postea cetero tincidunt eu. Sea commodo mediocrem tincidunt ea, vocibus graecis detracto cu qui, usu id hinc aperiri epicurei. Vel malis corpora qualisque in, eius labores eos et. Brute dicant scripta ad nec, in equidem consequat ullamcorper eum, no per zril saperet detraxit.</p>
+                            </td>
+                            <td>2/31/2017</td>
+                            <td>Parts/Service</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <a class="item_announceTitle">Chairman's Roundtable - Only 3 Selling Days Left!</a>
+                                <p class="item_announceContent">Lorem ipsum dolor sit amet, in clita discere sit, at qui augue antiopam, mei postea cetero tincidunt eu. Sea commodo mediocrem tincidunt ea, vocibus graecis detracto cu qui, usu id hinc aperiri epicurei. Vel malis corpora qualisque in, eius labores eos et. Brute dicant scripta ad nec, in equidem consequat ullamcorper eum, no per zril saperet detraxit.</p>
+                            </td>
+                            <td>1/11/2017</td>
+                            <td>Parts/Service</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <a class="item_announceTitle">Chairman's Roundtable - Only 3 Selling Days Left!</a>
+                                <p class="item_announceContent">Lorem ipsum dolor sit amet, in clita discere sit, at qui augue antiopam, mei postea cetero tincidunt eu. Sea commodo mediocrem tincidunt ea, vocibus graecis detracto cu qui, usu id hinc aperiri epicurei. Vel malis corpora qualisque in, eius labores eos et. Brute dicant scripta ad nec, in equidem consequat ullamcorper eum, no per zril saperet detraxit.</p>
+                            </td>
+                            <td>1/20/2017</td>
+                            <td>Parts/Service</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <a class="item_announceTitle">Chairman's Roundtable - Only 3 Selling Days Left!</a>
+                                <p class="item_announceContent">Lorem ipsum dolor sit amet, in clita discere sit, at qui augue antiopam, mei postea cetero tincidunt eu. Sea commodo mediocrem tincidunt ea, vocibus graecis detracto cu qui, usu id hinc aperiri epicurei. Vel malis corpora qualisque in, eius labores eos et. Brute dicant scripta ad nec, in equidem consequat ullamcorper eum, no per zril saperet detraxit.</p>
+                            </td>
+                            <td>3/31/2017</td>
+                            <td>Parts/Service</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="group_container faqs">
+                <div data-remove="remove">
+
+                    <p style="padding: 20px; font-weight: bold; border-bottom: 1px solid;">Contents</p>
+                    <p>Lorem ipsum dolor sit amet, in clita discere sit, at qui augue antiopam, 
+                        mei postea cetero tincidunt eu. Sea commodo mediocrem tincidunt ea, vocibus graecis detracto cu qui, usu id hinc aperiri epicurei. 
+                        Vel malis corpora qualisque in, eius labores eos et. 
+                        Brute dicant scripta ad nec, in equidem consequat ullamcorper eum, no per zril saperet detraxit.</p>
+                </div>
+            </div>
+            
+            <div class="group_container appdownload">
+                <div data-remove="remove">
+
+                    <p style="padding: 20px; font-weight: bold; border-bottom: 1px solid;">Contents</p>
+                    <p>Lorem ipsum dolor sit amet, in clita discere sit, at qui augue antiopam, 
+                        mei postea cetero tincidunt eu. Sea commodo mediocrem tincidunt ea, vocibus graecis detracto cu qui, usu id hinc aperiri epicurei. 
+                        Vel malis corpora qualisque in, eius labores eos et. 
+                        Brute dicant scripta ad nec, in equidem consequat ullamcorper eum, no per zril saperet detraxit.</p>
+                </div>
+            </div>
+            
+            <div class="group_container remoteservice">
+                <div data-remove="remove">
+
+                    <p style="padding: 20px; font-weight: bold; border-bottom: 1px solid;">Contents</p>
+                    <p>Lorem ipsum dolor sit amet, in clita discere sit, at qui augue antiopam, 
+                        mei postea cetero tincidunt eu. Sea commodo mediocrem tincidunt ea, vocibus graecis detracto cu qui, usu id hinc aperiri epicurei. 
+                        Vel malis corpora qualisque in, eius labores eos et. 
+                        Brute dicant scripta ad nec, in equidem consequat ullamcorper eum, no per zril saperet detraxit.</p>
+                </div>
+            </div>
+            
+
+        </section>
+        
+        <footer></footer>
+        <script src="js/main.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $("#announcementList").DataTable({
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>STARLINK&trade; Admin Portal | STARLINK&trade; Enrollment</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <link type="text/css" rel="stylesheet" href="css/enrollment.css">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+        
+        <style>
+            form input {
+                margin-bottom: 20px;
+                border: 1px solid #ccc !important;
+            }
+            
+            a.edit {
+                display: block;
+            }
+
+            select {
+                width: 100%;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                height: 30px;
+                border: 1px solid #999;
+                margin: 10px 0;
+            }
+
+            form .col3 {
+                padding: 20px;
+                box-shadow: 0 0 5px;
+                margin: 0 1%;
+                width: 31%;
+            }
+        </style>
+    </head>
+    <body  class="starlink_enroll">
+        <header></header>
+        <nav></nav>
+        
+        <section class="content">
+            <div class="search" id="search"></div>
+            
+            <h1>Karina Brodsky -- VIN 1234567890ABCDEFG</h1>
+            
+            <!--package-->
+            <div class="block block_expanded">
+                <div class="block_header clearfix">
+                    <div class="left block_header_detail">Package: <span class="tag starlink_enroll_header"></span></div>
+                    <div class="right block_header_options">
+                        <span class="minimize"></span>
+                        <span class="expand"></span>
+                    </div>
+                </div>
+                
+                <div class="block_content">
+                    <form class="starlink_enroll_plan">
+                        <div class="clearfix">
+                            <div class="col3 left">
+                                <div class="">
+                                    <h3>STARLINK&trade; Safety</h3>
+                                    <ul>
+                                        <li>SOS</li>
+                                        <li>Enhanced Roadside</li>
+                                        <li>ACN</li>
+                                        <li>Maintenance Notifications</li>
+                                        <li>Vehicle Health Report</li>
+                                        <li>Remote Vehicle Condition Check</li>
+                                        <li>Diagnostic Alerts</li>
+                                        <li>Service Appointment Scheduler</li>
+                                        <li>PHEV Climate Control</li>
+                                    </ul>
+                                    <select>
+                                        <option>3 years - FREE</option>
+                                        <option>4 years - $00.00</option>
+                                    </select>
+                                    <div class="couponContainer">
+                                        <span class="couponName">Coupon Name</span>
+                                        <span class="couponValue">$10.00 Off</span>
+                                        <span class="couponExp">No Expiration</span>
+                                    </div>
+                                </div>
+                                <a class="item_link primary">Select</a>
+                            </div>
+                            
+                            <div class="col3 left">
+                                <div class="">
+                                    <h3>STARLINK&trade; Safety & Remote Services</h3>
+                                    <p>Includes all features in STARLINK&trade; Safety PLUS:</p>
+                                    <ul>
+                                        <li>Stolen Vehicle Recovery</li>
+                                        <li>Stolen Vehicle Immobilizer</li>
+                                        <li>Vehicle Security Alarm Notifications</li>
+                                        <li>Remote Lock/Unlock</li>
+                                        <li>Remote Horn/Lights</li>
+                                        <li>Remote Vehicle Locator</li>
+                                        <li>Remote Engine Starter</li>
+                                        <li>Remote Climate Control/li>
+                                        <li>Geo Fencing</li>
+                                        <li>Speed Alert</li>
+                                        <li>Curfew Alert</li>
+                                    </ul>
+                                    <select>
+                                        <option>3 years - $00.00</option>
+                                        <option>4 years - $00.00</option>
+                                    </select>
+                                    <div class="couponContainer">
+                                        <span class="couponName">Coupon Name</span>
+                                        <span class="couponValue">$20.00 Off</span>
+                                        <span class="couponExp">Valid Through: Dec 20, 2016</span>
+                                    </div>
+                                </div>
+                                <a class="item_link primary">Select</a>
+                            </div>
+                            
+                            <div class="col3 left">
+                                <div class="">
+                                    <h3>STARLINK&trade; Safety & Remote Services & Concierge</h3>
+                                    <p>Includes all features in STARLINK&trade; Safety & Remote Services PLUS:</p>
+                                    <ul>
+                                        <li>STARLINK&trade; Concierge Services</li>
+                                    </ul>
+                                    <select>
+                                        <option>3 years - $00.00</option>
+                                        <option>4 years - $00.00</option>
+                                    </select>
+                                    <div class="couponContainer">
+                                        <span class="couponName">Coupon Name</span>
+                                        <span class="couponValue">$50.00 Off</span>
+                                        <span class="couponExp">Valid Through Jan 1, 2017</span>
+                                    </div>
+                                </div>
+                                <a class="item_link primary">Select</a>
+                            </div>
+                        </div>
+                        
+<!--                        <ul class="starlink_enroll_large_row">
+                            <li class="starlink_enroll_item_short clearfix">
+                                <div class="item_enrollment">
+                                    <div class="tag">3 yr Safety Trial</div>
+                                    <div class="clearfix">
+                                        <div class="left col2">Free</div>
+                                        <div class="right col2">Free/mo</div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li class="starlink_enroll_item_long clearfix">
+                                <ul class="starlin_enroll_small_row">
+                                    <li class="starlink_enroll_item_half clearfix">
+                                        <div class="item_enrollment">
+                                            <div class="tag">3 yr Safety Trial + 6 mo Remote</div>
+                                            <div class="clearfix">
+                                                <div class="left col2">$00.00</div>
+                                                <div class="right col2">4.99/mo</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="starlink_enroll_item_half clearfix">
+                                        <div class="item_enrollment">
+                                            <div class="tag">3 yr Safety Trial + 6 mo Remote + 1yr Concierge</div>
+                                            <div class="clearfix">
+                                                <div class="left col2">$00.00</div>
+                                                <div class="right col2">3.99/mo</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_enrollment">
+                                            <div class="tag">3 yr Safety Trial + 6 mo Remote + monthly Concierge</div>
+                                            <div class="clearfix">
+                                                <div class="left col2">$00.00</div>
+                                                <div class="right col2">3.99/mo</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
+                                <ul class="starlin_enroll_small_row">
+                                    <li class="starlink_enroll_item_half clearfix">
+                                        <div class="item_enrollment">
+                                            <div class="tag">3 yr Safety Trial + 6 mo Remote</div>
+                                            <div class="clearfix">
+                                                <div class="left col2">$00.00</div>
+                                                <div class="right col2">4.99/mo</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="starlink_enroll_item_half clearfix">
+                                        <div class="item_enrollment">
+                                            <div class="tag">3 yr Safety Trial + 3yr Remote</div>
+                                            <div class="clearfix">
+                                                <div class="left col2">$00.00</div>
+                                                <div class="right col2">2.99/mo</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_enrollment">
+                                            <div class="tag">3 yr Safety Trial + 6 mo Remote + 3yr Concierge</div>
+                                            <div class="clearfix">
+                                                <div class="left col2">$00.00</div>
+                                                <div class="right col2">2.99/mo</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                        
+                        <ul class="starlink_enroll_large_row">
+                            <li class="starlink_enroll_item_short clearfix">
+                                <div class="item_enrollment">
+                                    <div class="tag">4 yr Safety Trial (3 yr trial)</div>
+                                    <div class="clearfix">
+                                        <div class="left col2">$--.--</div>
+                                        <div class="right col2">$1.99</div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li class="starlink_enroll_item_long clearfix">
+                                <ul class="starlin_enroll_small_row">
+                                    <li class="starlink_enroll_item_half clearfix">
+                                        <div class="item_enrollment">
+                                            <div class="tag">4 yr Safety Trial (3 yr trial) + 4 yr Remote (6 mo trial)</div>
+                                            <div class="clearfix">
+                                                <div class="left col2">$--.--</div>
+                                                <div class="right col2">$1.99/mo</div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="starlink_enroll_item_half clearfix">
+                                        <div class="item_enrollment">
+                                            <div class="tag">4 yr Safety Trial (3 yr trial) + 4 yr Remote (6 mo trial) + 4 yr Concierge</div>
+                                            <div class="clearfix">
+                                                <div class="left col2">$--.--</div>
+                                                <div class="right col2">$1.88/mo</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                        </ul>-->
+                    </form>
+                </div>
+            </div>
+            
+            <!--preference-->
+            <div class="block block_expanded">
+                <div class="block_header clearfix">
+                    <div class="left block_header_detail">Customer Information <span class="tag starlink_enroll_header"></span></div>
+                    <div class="right block_header_options">
+                        <span class="minimize"></span>
+                        <span class="expand"></span>
+                    </div>
+                </div>
+                
+                <div class="block_content">
+                    <form class="starlink_enroll_preference">
+                        <div class="clearfix">
+                            <!--create pin-->
+                            <div class="left col3">
+                                <div class="label">Primary Email Address</div>
+                                <input type="text" value="kbro@subaru.com">
+                            </div>
+                            
+                            <!--phone-->
+                            <div class="left col3">
+                                <div class="label">Mobile Phone Number</div>
+                                <input type="text" value="">
+                                <div class="label">Carrier *</div>
+                                <select>
+                                    <option>--- Select ---</option>
+                                    <option>US Cellular</option>
+                                    <option>AT & T</option>
+                                    <option>T-Mobile</option>
+                                    <option>Sprint</option>
+                                </select>
+                            </div>
+                            
+                            <!--language-->
+                            <div class="left col3">
+                                <div class="label">Preferred Language</div>
+                                <select>
+                                    <option>English</option>
+                                    <option>French</option>
+                                    <option>Japanese</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="clearfix">
+                            <div class="right submitPreference" style="width: 200px; background: #20609f; color: #fff; padding: 5px; text-align: center;">Next</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!--payment-->
+            <div class="block block_expanded">
+                <div class="block_header clearfix">
+                    <div class="left block_header_detail">Payment <span class="tag starlink_enroll_header"></span></div>
+                    <div class="right block_header_options">
+                        <span class="minimize"></span>
+                        <span class="expand"></span>
+                    </div>
+                </div>
+                
+                <div class="block_content">
+                    <form class="starlink_enroll_payment">
+                        <div class="clearfix">
+                            <div class="left col3">
+                                <div class="label">First Name*</div><input type="text" value="Karina">
+                                <div class="label">Last Name*</div><input type="text" value="Brodsky">
+                                <div class="label">Credit Card Number*</div><input type="text" value="">
+                                <div class="label">Exp Date*</div><input type="text" value="">
+                            </div>
+                            
+                            <div class="left col3">
+                                <div class="label">Billing Address</div>
+                                <div style="margin-top: 5px;">
+                                    <span class="billing_addr_check checked"> Same as mailing address</span>
+                                </div>
+                                <div class="billing_addr_manual">
+                                    <div class="label">Address*</div><input type="text" value="">
+                                    <div class="label">Address 2</div><input type="text" value="">
+                                    <div class="label">City*</div><input type="text" value="">
+                                    <div class="label">State*</div><input type="text" value="">
+                                    <div class="label">Country*</div><input type="text" value="">
+                                    <div class="label">Province</div><input type="text" value="">
+                                    <div class="label">Zip*</div><input type="text" value="">
+                                </div>
+                            </div>
+                            
+                            <div class="left col3">
+                                <h3>Total: $99.99</h3>
+                                <hr>
+                                <p>Renewal Date : 08/06/2017</p>
+                                <div class="clearfix">
+                                    <div class="left">
+                                        <input type="text" placeholder="Enter a Promo Cede">
+                                    </div>
+                                    <div class="left">
+                                        <a class="" style="background: #20609f; color: #fff; padding: 6px; display: inline-block;">Apply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="clearfix">
+                            <div class="right submitPayment" style="width: 200px; background: #20609f; color: #fff; padding: 5px; text-align: center;">Review</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section id="review">
+            <div class='bg'></div>
+            <div class='content'></div>
+        </section>
+        
+        <footer></footer>
+        <script src="js/main.js"></script>
+        <script src="js/enroll.js"></script>
+        <script>
+        </script>
+    </body>
+</html>

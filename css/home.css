@@ -1,0 +1,46 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 30, 2016, 2:47:08 PM
+    Author     : ysu
+*/
+.home .search {
+    margin: 50px 0 20px;
+    box-shadow: 0 0 10px;
+    padding: 10px 5px;
+}
+
+.home .search .submitSearch {
+    display: none;
+}
+
+.home .button_block .item_link {
+    width: 200px;
+    margin: 0 10px;
+}
+
+.home section.content {
+    bottom: 0;
+    padding: 100px 0 50px;
+    background-image: url("../img/bg_subaru.png");
+    background-image: url("../img/bg_subaru2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home .home_announcements {
+    padding: 50px 20px;
+    background: rgba(255,255,255,0.5);
+    /*background: rgba(0,0,0,0.5);*/
+}
+
+.home_search_container {
+    padding: 50px 10px;
+    margin-top: 2px;
+    background: rgba(255,255,255,0.5);
+    /*background: rgba(0,0,0,0.5);*/
+}
