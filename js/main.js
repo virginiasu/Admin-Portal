@@ -19,9 +19,6 @@ $(document).ready(function () {
 
 //    hide nav into an icon
     initNav();
-
-//    modal
-    initModal();
 });
 
 function initBlock() {
@@ -83,62 +80,127 @@ function initNav() {
     });
 }
 
-function initModal(m) {
-    $(".modalTrigger").click(function () {
-        var $this = $(this),
-                $modal_id = $this.data("modal_id"),
-                $modal_title = $this.data("modal_title"),
-                $temp = $("#" + $modal_id);
-
-        if ($temp.length === 0) {
-            var $bg = '<div class="modal_bg"></div>', 
-                $container = $('<div class="modal_container"></div>'), 
-                $header = '<div class="header"><h1>' + $modal_title + '</h1><a class="close"></a></div>', 
-                $body = $('<div class="body">' + options.body
-                            + '</div>');
-
-            $temp = $('<section class="modal'
-                    + (options.starlink ? ' starlink-modal' : '')
-                    + (options.title === '' ? ' short-header' : '')
-                    + (options.classes ? ' ' + options.classes : '') + '" id="'
-                    + options.id + '"></section>');
-            $temp.append(bg);
-
-            $container.append($header);
-            $container.append($body);
-
-            $temp.append($container);
-
-            $('body').append($temp);
-
-            $temp.on('click', '.dismiss-trigger', function (e) {
-                e.preventDefault();
-                if (typeof options.cancel === 'function') {
-                    options.cancel(e);
-                }
-                if (options.preventClose !== true) {
-                    if ($("a.help.show-tooltip").length) {
-                        $("a.help.show-tooltip").trigger("click");
-                    }
-                    MySubaru.Modals.hide(options.id);
-                    unlockPage();
-                }
-            });
-
-            $temp.on('click', '.modal-bg', function (e) {
-                e.preventDefault();
-                if ($("a.help.show-tooltip").length) {
-                    $("a.help.show-tooltip").trigger("click");
-                }
-                if ($temp.hasClass("video-modal")) {
-                    MySubaru.Modals.destroy(options.id);
-                } else if ($("body").hasClass("my-profile") || options.id === "changeStatusModal") {
-                    $("a.continue", $temp).trigger("click");
-                } else {
-                    MySubaru.Modals.hide(options.id);
-                }
-                unlockPage();
-            });
-        }
-    });
-}
+//Modal = function () {
+//    var _this = this;
+////    default
+//    _this.options = {
+//        id: "TemplateModal",
+//        title: "Template Modal",
+//        body: "<div>Modal Body</div>"
+//    };
+//    
+//    _this.create = function (options) {
+//        var $temp = $('#' + options.id);
+//
+//        if ($temp.length === 0) {
+//            var bg = '<div class="modal-bg"></div>', $container = $('<div class="modal-container"></div>'), $header = '<div class="header"><h1>'
+//                    + options.title
+//                    + '</h1>'
+//                    + (options.noClose ? '<a class="close"></a>'
+//                            : '<a href="" class="close dismiss-trigger"></a>')
+//                    + '</div>', $body = $('<div class="body">' + options.body
+//                            + '</div>');
+//
+//            $temp = $('<section class="modal'
+//                    + '" id="' + options.id + '"></section>');
+//            $temp.append(bg);
+//
+//            $container.append($header);
+//            $container.append($body);
+//
+//            $temp.append($container);
+//
+//            $('body').append($temp);
+//
+//            $temp.on('click', '.dismiss-trigger', function (e) {
+//                e.preventDefault();
+//                if (typeof options.cancel === 'function') {
+//                    options.cancel(e);
+//                }
+//                if (options.preventClose !== true) {
+//                    if ($("a.help.show-tooltip").length) {
+//                        $("a.help.show-tooltip").trigger("click");
+//                    }
+//                    Modal.hide(options.id);
+//                    unlockPage();
+//                }
+//            });
+//
+//            $temp.on('click', '.modal-bg', function (e) {
+//                e.preventDefault();
+//                if ($("a.help.show-tooltip").length) {
+//                    $("a.help.show-tooltip").trigger("click");
+//                }
+//                if ($temp.hasClass("video-modal")) {
+//                    Modal.destroy(options.id);
+//                } else if ($("body").hasClass("my-profile") || options.id === "changeStatusModal") {
+//                    $("a.continue", $temp).trigger("click");
+//                } else {
+//                    Modal.hide(options.id);
+//                }
+//                unlockPage();
+//            });
+//        }
+//
+//        _this.show(options.id, options.openSetup);
+//        if (typeof options.init === 'function') {
+//            options.init($temp);
+//        }
+//
+//        return $temp;
+//    };
+//
+//    _this.destroy = function (id) {
+//        $('#' + id).remove();
+//        unlockPage();
+//        $(window).off('resize.modal');
+//    };
+//
+//    _this.hide = function (id) {
+//        $('#' + id).removeClass('show');
+//        unlockPage();
+//        $(window).off('resize.modal');
+//    };
+//
+//    _this.show = function (id, openSetup) {
+//        var $modal = $('#' + id);
+//        if (typeof openSetup === 'function') {
+//            openSetup($modal);
+//        }
+//
+//        lockPage();
+//        _this.resize(id);
+//        $modal.find('.body').scrollTop(0);
+//        $(window).bind(
+//                'orientationchange resize',
+//                function (id) {
+//                    var $modal = (typeof id === 'string' ? $('#' + id
+//                            + ' .modal-container')
+//                            : $('.modal:visible .modal-container')), wh = $(
+//                            window).height(), $modalH = 0.9 * wh,
+//                            hh = $modal.children('.header').outerHeight() > $modal.children('header').outerHeight() ? $modal.children('.header').outerHeight() : $modal.children('header').outerHeight();
+//                    $modal.css('max-height', $modalH + 'px');
+//                    $modal.children('.body').css('max-height',
+//                            $modalH - hh + 'px');
+//                });
+//    };
+//
+//    // NOTE: This method should be called if/when the content in a modal is
+//    // changed (b/c of the height change)
+//    _this.resize = function (id) {
+//        var $modal = (typeof id === 'string' ? $('#' + id + ' .modal-container')
+//                : $('.modal:visible .modal-container')),
+//                wh = $(window).height(),
+//                $modalH = 0.9 * wh,
+//                hh = $modal.children('.header').outerHeight() > $modal.children('header').outerHeight() ? $modal.children('.header').outerHeight() : $modal.children('header').outerHeight();
+//        $modal.parent().addClass('pre-show');
+//        $modal.removeClass('oversize fulloversize long').css('max-height',
+//                $modalH + 'px');
+//        $modal.children('.body').css('max-height', $modalH - hh + 'px');
+//
+//        $modal.parent().removeClass('pre-show').addClass('show');
+//    };
+//
+//};
+//
+//console.log(Modal.create);
