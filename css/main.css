@@ -49,11 +49,31 @@ p {
     margin: 5px 0;
 }
 
+/*inputs*/
+.inputContainer {
+    padding: 10px;
+}
+.inputContainer .tag {
+    display: inline-block;
+    width: 150px;
+    font-size: 13px;
+    margin-right: 10px;
+}
 input[type="text"] {
     padding: 5px;
     width: 200px;
     border: none;
     outline: none;
+}
+
+.modal input[type="text"] {
+    border-bottom: 1px solid #666;
+}
+
+.modal input[type="date"] {
+    padding: 5px 10px;
+    width: 200px;
+    font-size: 14px;
 }
 
 /*input checkbox*/
@@ -71,7 +91,7 @@ input[type="text"] {
     margin-right: 10px;
 }
 
-.checkbox_container input.checkGeneral {
+.checkbox_container input.checkGeneral, input.check_radio {
     display: none;
 }
 
@@ -106,6 +126,32 @@ input[type="text"] {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90%;
+}
+
+/*radio*/
+label.label_radio {
+        font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px 5px 20px;
+    position: relative;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+label.label_radio:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 6px;
+    border: 3px solid #333;
+}
+
+.check_radio:checked + label.label_radio:after {
+        background: #0099ff;
 }
 
 
@@ -224,6 +270,8 @@ td {
     background: #20609f;
     color: #fff;
     border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .item_link.secondary {
@@ -231,12 +279,16 @@ td {
     background: #90b9e2;
     color: #000;
     border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .item_link.cancel {
     padding: 6px 10px;
     border: 1px solid;
     border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .item_link.remove {
@@ -244,6 +296,8 @@ td {
     border-radius: 5px;
     color: #fff;
     background: #a92e1f;
+    margin-left: 5px;
+    margin-right: 5px;
     /*background: #c31600;*/
 }
 
@@ -252,6 +306,8 @@ td {
     background: #20609f;
     color: #fff;
     border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .item_link.ext:before {
@@ -508,13 +564,10 @@ section.content.push {
   *********************************************/
 .group_container {
     display: none;
-    padding: 0 20px;
+    padding: 10px 20px;
 }
 
 .group_item {
-/*    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 8px;*/
 }
 
 .group_item .col2.shadow_container {
@@ -557,6 +610,8 @@ section.content.push {
 
 .modal_bg {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
@@ -569,6 +624,16 @@ section.content.push {
     min-height: 300px;
     max-height: 90%;
     background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    top: 50%;
+    left: 50%;
+    
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .modal_header {
@@ -580,7 +645,7 @@ section.content.push {
     color: #fff;
 }
 
-.modal_close {
+.modal_header .modal_close {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -589,4 +654,12 @@ section.content.push {
     top: 0;
     right: 0;
     padding: 18px;
+    background: url("../img/icon_close.svg") no-repeat center;
+    background-size: 18px;
+    cursor: pointer;
+}
+
+.modal_content {
+    position: relative;
+    padding: 20px 20px 40px;
 }

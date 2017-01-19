@@ -33,7 +33,12 @@ $(function () {
 //    add coupon
     $(".addCouponTrigger").click(function(e){
         e.preventDefault();
-        $("#AddCouponModal").show();
+        $("#AddCouponModal").show(function(){
+            var $this = $(this);
+            $(".modal_close", $this).click(function(){
+                $this.hide();
+            });
+        });
     });
 });
 

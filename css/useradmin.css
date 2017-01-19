@@ -1,0 +1,22 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 18, 2017, 12:18:27 PM
+    Author     : ysu
+*/
+.user_admin .group_item .col3 {
+    padding: 10px;
+}
+
+.user_admin .tag_team {
+    border: 1px solid #666;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#idleUserList {
+    width: 100%;
+}
